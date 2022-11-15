@@ -20,7 +20,7 @@ function App() {
     <>
       <Router>
         <Header />
-        <div className='flex flex-col justify-between h-screen'>
+        <div className='flex flex-col justify-between h-max'>
           <main className='w-full py-auto mx-auto'>
             <Routes>
               <Route path='/' element={<HomePage />} />

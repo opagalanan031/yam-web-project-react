@@ -5,7 +5,7 @@ function ContactUs() {
   return (
     <div className='flex w-full'>
       <Sidebar />
-      <div className='h-screen mx-auto my-auto'>
+      <div className='h-screen w-full'>
         Contact Us Content
       </div>
     </div>

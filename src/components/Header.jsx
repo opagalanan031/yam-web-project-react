@@ -28,16 +28,34 @@ function Header() {
   return (
     <>
       <nav className='navbar relative shadow-lg bg-blue-600 text-neutral-content'>
-        <div className='flex max-w-6xl mx-auto py-5'>
+        <div className='flex max-w-6xl mx-auto py-10'>
           <div className='flex-none px-2 mx-2 hover:text-white'>
-            <Link to='/' className='text-3xl font-bold align-middle'>
-              Young Adults Ministry
-            </Link>
+            {user ? (
+              <>
+                <Link
+                  to='/dashboard'
+                  className='text-3xl font-bold align-middle'
+                >
+                  Young Adults Ministry
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to='/' className='text-3xl font-bold align-middle'>
+                  Young Adults Ministry
+                </Link>
+              </>
+            )}
           </div>
           <div className='flex-1 px-2 mx-2 my-auto'>
             {user ? (
               <>
                 <div className='hidden lg:flex justify-end items-center'>
+                  <Link to='/profile' className='mx-5 mt-0.5 font-bold hover:text-white'>
+                    <button>
+                      Welcome {user.firstName}
+                    </button>
+                  </Link>
                   <button
                     className='mx-5 font-bold hover:text-white'
                     onClick={onLogout}
@@ -47,7 +65,7 @@ function Header() {
                 </div>
                 <div className='lg:hidden flex justify-end my-auto hover:text-white'>
                   <button id='menu-btn' onClick={onClick}>
-                    <FaBars />
+                    <FaBars className='w-8 h-8' />
                   </button>
                 </div>
               </>
@@ -66,7 +84,7 @@ function Header() {
                 </div>
                 <div className='lg:hidden flex justify-end my-auto hover:text-white'>
                   <button id='menu-btn' onClick={onClick}>
-                    <FaBars />
+                    <FaBars className='w-8 h-8' />
                   </button>
                 </div>
               </>
@@ -93,27 +111,47 @@ function Header() {
             <>
               <div className='text-center space-y-5'>
                 <div className='font-bold'>
-                  <Link to='/dashboard' className='hover:text-blue-500' onClick={onClick}>
+                  <Link
+                    to='/dashboard'
+                    className='hover:text-blue-500'
+                    onClick={onClick}
+                  >
                     Dashboard
                   </Link>
                 </div>
                 <div className='font-bold'>
-                  <Link to='/profile' className='hover:text-blue-500' onClick={onClick}>
+                  <Link
+                    to='/profile'
+                    className='hover:text-blue-500'
+                    onClick={onClick}
+                  >
                     Profile
                   </Link>
                 </div>
                 <div className='font-bold'>
-                  <Link to='/about' className='hover:text-blue-500' onClick={onClick}>
+                  <Link
+                    to='/about'
+                    className='hover:text-blue-500'
+                    onClick={onClick}
+                  >
                     About
                   </Link>
                 </div>
                 <div className='font-bold'>
-                  <Link to='/schedule' className='hover:text-blue-500' onClick={onClick}>
+                  <Link
+                    to='/schedule'
+                    className='hover:text-blue-500'
+                    onClick={onClick}
+                  >
                     Schedule
                   </Link>
                 </div>
                 <div className='font-bold'>
-                  <Link to='/contact-us' className='hover:text-blue-500' onClick={onClick}>
+                  <Link
+                    to='/contact-us'
+                    className='hover:text-blue-500'
+                    onClick={onClick}
+                  >
                     Contact Us
                   </Link>
                 </div>

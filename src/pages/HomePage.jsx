@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function HomePage() {
   return (
     <>
-      <div className='lg:grid lg:grid-cols-2 lg:gap-20 xl:gap-10 sm:py-12 sm:px-10 lg:py-0 lg:px-20 sm:mt-20 lg:mt-40'>
-        <div className="text-center mx-auto">
+      <div className='lg:grid lg:grid-cols-2 lg:gap-20 xl:gap-10 sm:py-12 sm:px-10 lg:py-0 lg:px-20 sm:my-10 lg:my-0 h-screen'>
+        <div className="text-center mx-auto my-auto">
           <img src="https://parkforestbaptist.org/wp-content/uploads/2019/10/YAM-Graphic-e1571669386998.jpg" 
             alt='yam' className='rounded-lg mx-auto' /> 
           <p className="invisible lg:visible mt-5 font-bold text-3xl">Welcome to the Young Adults Ministry!</p>

@@ -78,7 +78,7 @@ function Register() {
 
   return (
     <>
-      <div className='mx-auto justify-center sm:mt-20 lg:mt-40'>
+      <div className='mx-auto h-screen justify-center sm:mt-20 lg:mt-40'>
         <header>
           <p className='text-3xl mb-5 mx-auto text-center font-bold font-serif'>
             Create an Account
